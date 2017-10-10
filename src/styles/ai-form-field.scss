@@ -1,0 +1,37 @@
+@import '~@angular/material/_theming.scss';
+
+@mixin ai-mat-core($config) {
+  // The unit-less line-height from the font config.
+  $line-height: mat-line-height($config, input);
+  // The amount of space between the top of the line and the top of the actual text
+  // (as a fraction of the font-size).
+  $line-spacing: ($line-height - 1) / 2;
+  // The padding on the infix. Mocks show half of the text size, but seem to measure from the edge
+  // of the text itself, not the edge of the line; therefore we subtract off the line spacing.
+  $infix-padding: 0.5em - $line-spacing;
+
+  .mat-form-field-infix {
+    padding: $infix-padding;
+    border: 1px solid darkgrey;
+    border-radius: 3px;
+    background-color: white;
+  }
+
+  .mat-form-field-placeholder {
+    padding-left: $infix-padding;
+  }
+}
+
+@mixin ai-mat-form-field-theme($theme) {
+  $warn: map-get($theme, warn);
+  .mat-form-field-underline {
+    display: none;
+  }
+
+  .mat-form-field-invalid {
+    .mat-form-field-infix {
+      border-color: mat-color($warn);
+    }
+  }
+
+}
