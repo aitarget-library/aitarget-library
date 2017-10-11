@@ -1,0 +1,19 @@
+<div class="layout">
+  <header>
+    <mat-toolbar color="primary">
+      <span>Aitarget</span>
+      <span>Components</span>
+      <span class="spacer"></span>
+    </mat-toolbar>
+  </header>
+  <mat-sidenav-container class="layout-content">
+    <mat-sidenav [opened]="true" [mode]="'side'">
+      <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <router-outlet></router-outlet>
+  </mat-sidenav-container>
+  <footer>
+    <!--<mat-toolbar color="primary">-->
+    <!--</mat-toolbar>-->
+  </footer>
+</div>

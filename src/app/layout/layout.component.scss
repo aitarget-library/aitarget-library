@@ -1,0 +1,38 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.layout {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+
+  grid-template-areas:
+    "header header"
+    "content content"
+    "footer footer";
+}
+
+.layout-content {
+  grid-area: content;
+}
+
+aside {
+  grid-area: sidebar;
+  background-color: #00c853;
+}
+
+header {
+  grid-area: header;
+}
+
+footer {
+  grid-area: footer;
+}
+
+article {
+  background-color: #00b0ff;
+  grid-area: content;
+
+}

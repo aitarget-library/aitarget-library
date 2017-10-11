@@ -1,0 +1,13 @@
+<form [style.display]="'flex'"
+      [style.justify-content]="'center'"
+      [style.align-items]="'center'"
+      [style.height]="'200px'">
+
+  <mat-form-field [floatPlaceholder]="'never'">
+    <mat-select placeholder="Favorite food">
+      <mat-option *ngFor="let food of foods" [value]="food.value">
+        {{food.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</form>
